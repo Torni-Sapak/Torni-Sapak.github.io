@@ -107,7 +107,12 @@ h2 em{font-style:italic;color:var(--sky)}
 .exp-org{font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
 .exp-place{font-size:.78rem;color:var(--muted)}
 .exp-body{}
-.exp-role{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:300;color:var(--white);margin-bottom:1rem;letter-spacing:-.01em}
+.exp-role{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:300;color:var(--white);margin-bottom:.6rem;letter-spacing:-.01em}
+.exp-badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.9rem}
+.exp-badge{padding:.2rem .7rem;font-size:.65rem;font-family:'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;border:1px solid;border-radius:2px}
+.badge-insurance{color:#f0b86e;border-color:rgba(240,184,110,.3);background:rgba(240,184,110,.06)}
+.badge-fintech{color:#7ec8e3;border-color:rgba(126,200,227,.3);background:rgba(126,200,227,.06)}
+.badge-ai{color:#86efac;border-color:rgba(134,239,172,.3);background:rgba(134,239,172,.06)}
 .exp-pts{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .exp-pts li{font-size:.88rem;color:var(--muted);line-height:1.65;padding-left:1.2rem;position:relative;font-weight:300}
 .exp-pts li::before{content:'';position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:var(--blue-light)}
@@ -458,11 +463,16 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
       </div>
       <div class="exp-body">
         <div class="exp-role">Full Stack Software Engineer</div>
+        <div class="exp-badges">
+          <span class="exp-badge badge-insurance">Insurance Technology</span>
+          <span class="exp-badge badge-fintech">Fintech</span>
+        </div>
         <ul class="exp-pts">
-          <li>Built scalable microservices and RESTful APIs in C#/.NET for fintech and insurance platforms</li>
-          <li>Implemented OAuth2, JWT, and RBAC auth flows for enterprise-grade security</li>
-          <li>Optimized SQL queries with indexing and caching, cutting response times under high load</li>
-          <li>Designed event-driven workflows and background processing systems</li>
+          <li>Led backend engineering for enterprise <strong style="color:var(--text)">insurance policy management and claims processing</strong> platforms serving thousands of users</li>
+          <li>Built scalable microservices and RESTful APIs in C#/.NET handling complex insurance domain logic — policy lifecycle, underwriting rules, and premium calculations</li>
+          <li>Implemented OAuth2, JWT, and RBAC auth flows meeting enterprise-grade compliance and security requirements</li>
+          <li>Designed reusable domain services for insurance workflows — quotes, endorsements, renewals, and reporting</li>
+          <li>Optimized SQL queries with indexing and caching, cutting response times under high load in fintech environments</li>
           <li>Mentored junior developers; led code reviews to maintain quality standards</li>
         </ul>
       </div>
@@ -475,11 +485,14 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
       </div>
       <div class="exp-body">
         <div class="exp-role">Junior Software Engineer</div>
+        <div class="exp-badges">
+          <span class="exp-badge badge-insurance">Insurance Technology</span>
+        </div>
         <ul class="exp-pts">
-          <li>Built reusable React UI components used across multiple product lines</li>
-          <li>Implemented automated unit and integration testing pipelines</li>
-          <li>Created dashboards to monitor system performance and user activity</li>
-          <li>Supported full-stack integrations between frontend, APIs, and third-party services</li>
+          <li>Built reusable React UI components for insurance customer portals and agent-facing dashboards</li>
+          <li>Implemented automated unit and integration testing pipelines, improving release stability across insurance products</li>
+          <li>Created real-time dashboards to monitor system performance, claims volume, and user activity</li>
+          <li>Supported full-stack integrations between frontend portals, backend APIs, and third-party insurance data services</li>
         </ul>
       </div>
     </div>
@@ -491,10 +504,13 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
       </div>
       <div class="exp-body">
         <div class="exp-role">Software Engineering Intern</div>
+        <div class="exp-badges">
+          <span class="exp-badge badge-insurance">Insurance Technology</span>
+        </div>
         <ul class="exp-pts">
-          <li>Implemented C#/.NET backend features for microservices and REST APIs</li>
-          <li>Optimized SQL operations and built automation scripts for log monitoring</li>
-          <li>Enhanced enterprise insurance platform backend workflows and reporting modules</li>
+          <li>Implemented C#/.NET backend features for microservices and REST APIs supporting insurance operations</li>
+          <li>Enhanced enterprise insurance platform — improved backend workflows for policy administration and reporting modules</li>
+          <li>Optimized SQL operations and built automation scripts for log monitoring across insurance services</li>
         </ul>
       </div>
     </div>
