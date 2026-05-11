@@ -79,19 +79,13 @@ h2 em{font-style:italic;color:var(--sky)}
 
 /* SKILLS */
 #skills{background:var(--navy2);border-top:1px solid var(--border)}
-.skills-layout{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start}
-.skills-nav{position:sticky;top:100px}
-.skill-tab{display:block;padding:.75rem 0;font-size:.85rem;color:var(--muted);font-weight:400;cursor:pointer;border-left:2px solid transparent;padding-left:1.25rem;transition:all .2s;user-select:none}
-.skill-tab.active{color:var(--sky);border-left-color:var(--sky)}
-.skill-tab:hover:not(.active){color:var(--text);border-left-color:var(--faint)}
-.skills-content{}
-.skill-panel{display:none}
-.skill-panel.active{display:block}
-.skill-panel-title{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;color:var(--white);margin-bottom:.6rem;letter-spacing:-.01em}
-.skill-panel-desc{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:2rem;font-weight:300;max-width:500px}
+.skills-panels{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 5rem}
+.skill-panel{display:block}
+.skill-panel-title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:300;color:var(--white);margin-bottom:.4rem;letter-spacing:-.01em}
+.skill-panel-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.5rem;font-weight:300}
 .skill-items{display:flex;flex-direction:column;gap:.75rem}
 .skill-row{display:flex;align-items:center;gap:1.25rem}
-.skill-name-col{font-size:.85rem;color:var(--text);font-weight:500;width:180px;flex-shrink:0}
+.skill-name-col{font-size:.82rem;color:var(--text);font-weight:500;width:160px;flex-shrink:0}
 .skill-bar-wrap{flex:1;height:2px;background:var(--navy4);position:relative;overflow:visible}
 .skill-bar{height:100%;background:linear-gradient(90deg,var(--blue),var(--sky));transition:width 1s ease}
 .skill-level{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--faint);margin-left:.75rem;width:60px;text-align:right}
@@ -184,7 +178,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   section{padding:5rem 2.5rem}
   #hero{padding:0 2.5rem}
   .about-layout{gap:3rem}
-  .skills-layout{grid-template-columns:200px 1fr;gap:3rem}
+  .skills-panels{gap:2.5rem 3rem}
   .exp-row{grid-template-columns:160px 1fr;gap:2rem}
   .proj-grid{grid-template-columns:repeat(2,1fr)}
   .edu-row{grid-template-columns:160px 1fr;gap:2rem}
@@ -212,13 +206,10 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   .stat{padding:1.5rem 1.25rem}
   .stat-n{font-size:2.2rem}
 
-  .skills-layout{grid-template-columns:1fr;gap:1.5rem}
-  .skills-nav{position:static;display:flex;flex-wrap:wrap;gap:.4rem}
-  .skill-tab{border-left:none;border:1px solid var(--border2);padding:.45rem .8rem;font-size:.75rem}
-  .skill-tab.active{background:rgba(126,200,227,.08);border-color:var(--sky)}
+  .skills-panels{grid-template-columns:1fr;gap:2rem}
   .skill-name-col{width:120px;font-size:.8rem}
   .skill-level{display:none}
-  .skill-panel-title{font-size:1.25rem}
+  .skill-panel-title{font-size:1.15rem}
 
   .exp-row{grid-template-columns:1fr;gap:.6rem;padding:2rem 0}
   .exp-row::before{display:none}
@@ -328,19 +319,9 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   <div class="section-eyebrow fade-up"><span class="eyebrow-line"></span><span class="eyebrow-text">02 - Skills</span></div>
   <h2 class="fade-up d1">What I work <em>with</em></h2>
   <p class="section-sub fade-up d2">A broad toolkit built over 7+ years of real-world engineering.</p>
-  <div class="skills-layout">
-    <div class="skills-nav fade-up d2">
-      <div class="skill-tab active" onclick="showPanel('backend',this)">Backend & APIs</div>
-      <div class="skill-tab" onclick="showPanel('frontend',this)">Frontend</div>
-      <div class="skill-tab" onclick="showPanel('aiml',this)">AI / ML</div>
-      <div class="skill-tab" onclick="showPanel('databases',this)">Databases</div>
-      <div class="skill-tab" onclick="showPanel('cloud',this)">Cloud & DevOps</div>
-      <div class="skill-tab" onclick="showPanel('robotics',this)">Robotics & Systems</div>
-      <div class="skill-tab" onclick="showPanel('practices',this)">Practices</div>
-    </div>
-    <div class="skills-content fade-up d3">
+  <div class="skills-panels">
 
-      <div class="skill-panel active" id="panel-backend">
+      <div class="skill-panel fade-up" id="panel-backend">
         <div class="skill-panel-title">Backend & APIs</div>
         <div class="skill-panel-desc">Building robust, scalable server-side systems and RESTful services used in high-traffic fintech and insurance environments.</div>
         <div class="skill-items">
@@ -354,7 +335,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-      <div class="skill-panel" id="panel-frontend">
+      <div class="skill-panel fade-up" id="panel-frontend">
         <div class="skill-panel-title">Frontend</div>
         <div class="skill-panel-desc">Crafting responsive, accessible user interfaces with modern frameworks and clean component architecture.</div>
         <div class="skill-items">
@@ -367,7 +348,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-      <div class="skill-panel" id="panel-aiml">
+      <div class="skill-panel fade-up" id="panel-aiml">
         <div class="skill-panel-title">AI / Machine Learning</div>
         <div class="skill-panel-desc">Designing and training ML models for computer vision, NLP, and data analysis - applied to real academic and research projects.</div>
         <div class="skill-items">
@@ -382,7 +363,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-      <div class="skill-panel" id="panel-databases">
+      <div class="skill-panel fade-up" id="panel-databases">
         <div class="skill-panel-title">Databases</div>
         <div class="skill-panel-desc">Designing normalized schemas, writing optimized queries, and managing both relational and NoSQL data stores at scale.</div>
         <div class="skill-items">
@@ -396,7 +377,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-      <div class="skill-panel" id="panel-cloud">
+      <div class="skill-panel fade-up" id="panel-cloud">
         <div class="skill-panel-title">Cloud & DevOps</div>
         <div class="skill-panel-desc">Deploying and managing cloud infrastructure, containerized workloads, and automated CI/CD pipelines across AWS, Azure, and GCP.</div>
         <div class="skill-items">
@@ -410,7 +391,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-      <div class="skill-panel" id="panel-robotics">
+      <div class="skill-panel fade-up" id="panel-robotics">
         <div class="skill-panel-title">Robotics & Systems</div>
         <div class="skill-panel-desc">Low-level programming and autonomous system design - from robot navigation to compiler tools and game AI.</div>
         <div class="skill-items">
@@ -423,7 +404,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-      <div class="skill-panel" id="panel-practices">
+      <div class="skill-panel fade-up" id="panel-practices">
         <div class="skill-panel-title">Engineering Practices</div>
         <div class="skill-panel-desc">Beyond code - the habits, methodologies, and collaborative skills that make engineering teams effective.</div>
         <div class="skill-items">
@@ -437,7 +418,6 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
         </div>
       </div>
 
-    </div>
   </div>
 </section>
 
@@ -668,13 +648,6 @@ document.querySelectorAll('.mobile-link').forEach(a=>{
   });
 });
 
-// Skills tabs
-function showPanel(id, tab){
-  document.querySelectorAll('.skill-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.skill-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('panel-'+id).classList.add('active');
-  tab.classList.add('active');
-}
 </script>
 </body>
 </html>
