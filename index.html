@@ -83,12 +83,8 @@ h2 em{font-style:italic;color:var(--sky)}
 .skill-panel{display:block}
 .skill-panel-title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:300;color:var(--white);margin-bottom:.4rem;letter-spacing:-.01em}
 .skill-panel-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.5rem;font-weight:300}
-.skill-items{display:flex;flex-direction:column;gap:.75rem}
-.skill-row{display:flex;align-items:center;gap:1.25rem}
-.skill-name-col{font-size:.82rem;color:var(--text);font-weight:500;width:160px;flex-shrink:0}
-.skill-bar-wrap{flex:1;height:2px;background:var(--navy4);position:relative;overflow:visible}
-.skill-bar{height:100%;background:linear-gradient(90deg,var(--blue),var(--sky));transition:width 1s ease}
-.skill-level{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--faint);margin-left:.75rem;width:60px;text-align:right}
+.skill-items{display:flex;flex-wrap:wrap;gap:.5rem}
+.skill-tag{padding:.42rem .75rem;border:1px solid var(--border2);color:var(--text);font-size:.75rem;font-weight:500;background:rgba(13,27,42,.35)}
 
 /* EXPERIENCE */
 #experience{border-top:1px solid var(--border)}
@@ -207,8 +203,6 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   .stat-n{font-size:2.2rem}
 
   .skills-panels{grid-template-columns:1fr;gap:2rem}
-  .skill-name-col{width:120px;font-size:.8rem}
-  .skill-level{display:none}
   .skill-panel-title{font-size:1.15rem}
 
   .exp-row{grid-template-columns:1fr;gap:.6rem;padding:2rem 0}
