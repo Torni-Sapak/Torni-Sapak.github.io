@@ -130,11 +130,16 @@ h2 em{font-style:italic;color:var(--sky)}
 
 /* RESEARCH */
 #research{border-top:1px solid var(--border)}
+#publications{border-top:1px solid var(--border);background:var(--navy2)}
 .research-soon{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5rem 0;text-align:center}
 .research-badge{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);border:1px solid rgba(126,200,227,.25);padding:.4rem 1rem;margin-bottom:2.5rem;display:inline-block}
 .research-soon-title{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--white);letter-spacing:-.02em;margin-bottom:1rem}
 .research-soon-title em{font-style:italic;color:var(--sky)}
 .research-soon-sub{font-size:.92rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:420px}
+.research-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--border2);width:min(760px,100%);margin-top:1.5rem;border:1px solid var(--border2);text-align:left}
+.research-item{background:var(--navy);padding:1.5rem}
+.research-item-title{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.45rem}
+.research-item-desc{font-size:.82rem;color:var(--muted);line-height:1.65;font-weight:300}
 
 /* CONTACT */
 #contact{border-top:1px solid var(--border);text-align:center}
@@ -204,6 +209,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
 
   .skills-panels{grid-template-columns:1fr;gap:2rem}
   .skill-panel-title{font-size:1.15rem}
+  .research-list{grid-template-columns:1fr}
 
   .exp-row{grid-template-columns:1fr;gap:.6rem;padding:2rem 0}
   .exp-row::before{display:none}
@@ -574,15 +580,34 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   <div class="section-eyebrow fade-up"><span class="eyebrow-line"></span><span class="eyebrow-text">06 Research</span></div>
   <h2 class="fade-up d1">What I'm <em>exploring</em></h2>
   <div class="research-soon fade-up d2">
-    <span class="research-badge">Research Interest</span>
-    <div class="research-soon-title">High-performance <em>computing systems</em></div>
-    <p class="research-soon-sub">I'm interested in high-performance computing, compiler design, parallel programming, and systems research that makes software faster, more efficient, and easier to optimize across modern hardware.</p>
+    <span class="research-badge">Research Interests</span>
+    <div class="research-soon-title">Systems, intelligence, and <em>performance</em></div>
+    <div class="research-list">
+      <div class="research-item">
+        <div class="research-item-title">High-Performance Computing & Compiler Design</div>
+        <p class="research-item-desc">Parallel programming, compiler optimization, runtime systems, and software techniques that improve performance across modern hardware.</p>
+      </div>
+      <div class="research-item">
+        <div class="research-item-title">Machine Learning, AI & Computer Vision</div>
+        <p class="research-item-desc">Applied machine learning, AI-assisted systems, and computer vision methods for automation, recognition, and human-centered tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-eyebrow fade-up"><span class="eyebrow-line"></span><span class="eyebrow-text">07 Research Publications</span></div>
+  <h2 class="fade-up d1">Research publications</h2>
+  <div class="research-soon fade-up d2">
+    <span class="research-badge">Coming Soon</span>
+    <p class="research-soon-sub">Publications and research writing will be added here as they become available.</p>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-eyebrow fade-up" style="justify-content:center"><span class="eyebrow-line"></span><span class="eyebrow-text">07 Contact</span><span class="eyebrow-line"></span></div>
+  <div class="section-eyebrow fade-up" style="justify-content:center"><span class="eyebrow-line"></span><span class="eyebrow-text">08 Contact</span><span class="eyebrow-line"></span></div>
   <h2 class="contact-big fade-up d1">Let's work <em>together</em></h2>
   <p class="contact-sub fade-up d2">Open to full-time roles, collaborations, and interesting problems.</p>
   <div class="contact-links fade-up d3">
