@@ -282,7 +282,7 @@ footer{padding:1rem;max-width:980px;margin:0 auto 2rem;border:2px solid var(--ru
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Contact</a>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">☼</button>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">☾</button>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
@@ -638,7 +638,7 @@ window.addEventListener('scroll',()=>{
 const themeToggle = document.getElementById('themeToggle');
 const setThemeButton = ()=>{
   const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  themeToggle.textContent = isLight ? '☾' : '☼';
+  themeToggle.textContent = '☾';
   themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
 };
 setThemeButton();
