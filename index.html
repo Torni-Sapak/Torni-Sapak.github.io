@@ -53,11 +53,9 @@ a{color:var(--blue)}
 nav{position:static;padding:.65rem 1rem;margin:0 auto;max-width:980px;min-height:48px;display:flex;align-items:center;justify-content:space-between;border:2px solid var(--rule);border-top:0;background:var(--panel)}
 nav.scrolled{background:var(--panel);border-bottom:2px solid var(--rule)}
 .logo{font-family:Georgia,'Times New Roman',serif;font-size:1.45rem;color:var(--ink);font-weight:bold;letter-spacing:0}
-.nav-links{display:flex;gap:.35rem;list-style:none;flex-wrap:wrap;justify-content:flex-end}
-.nav-links a{font-size:.88rem;font-weight:normal;letter-spacing:0;text-transform:none;color:var(--blue);text-decoration:underline;padding:.2rem .35rem}
-.nav-links a:hover{color:var(--ink);background:var(--shade2)}
-.nav-cta{padding:.25rem .6rem;border:1px solid var(--rule);color:var(--blue);font-size:.88rem;font-weight:normal;letter-spacing:0;text-transform:none;text-decoration:none;background:var(--shade);font-family:Arial,Helvetica,sans-serif}
-.nav-cta:hover{background:var(--shade2);border-color:var(--rule)}
+.nav-links{display:flex;gap:.4rem;list-style:none;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{display:inline-block;padding:.25rem .6rem;border:1px solid var(--rule);color:var(--blue);font-size:.88rem;font-weight:normal;letter-spacing:0;text-transform:none;text-decoration:none;background:var(--shade);font-family:Arial,Helvetica,sans-serif}
+.nav-links a:hover{color:var(--ink);background:var(--shade2);border-color:var(--rule)}
 .theme-toggle{width:1.9rem;height:1.9rem;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid var(--rule);color:var(--blue);font-size:1rem;font-weight:normal;background:var(--shade);font-family:Georgia,'Times New Roman',serif;cursor:pointer;line-height:1}
 .theme-toggle:hover{background:var(--shade2);color:var(--ink)}
 
@@ -213,7 +211,7 @@ footer{padding:1rem;max-width:980px;margin:0 auto 2rem;border:2px solid var(--ru
 /* ── MOBILE ── */
 @media(max-width:768px){
   nav{padding:.6rem 1rem;min-height:52px}
-  .nav-links,.nav-cta{display:none}
+  .nav-links{display:none}
   .hamburger{display:flex}
   .mobile-menu{display:flex}
   .theme-toggle{margin-left:auto}
@@ -281,7 +279,6 @@ footer{padding:1rem;max-width:980px;margin:0 auto 2rem;border:2px solid var(--ru
     <li><a href="#research">Research</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Contact</a>
   <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">☾</button>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
